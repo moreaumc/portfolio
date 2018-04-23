@@ -1,0 +1,302 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="about-me">
+  <template>
+    <style include="shared-styles">
+      :host {
+      }
+
+      .c-bio {
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .c-bio p {
+        margin-top: 1rem;
+      }
+
+      .c-tools {
+      }
+    </style>
+
+      <div class="">
+        <div class="c-callout">
+          I am an interaction designer (UX) with <br /> a background in software engineering <br /> living in the East Bay.
+        </div>
+        <div class="c-callout">
+          <img src="images/about/caricature.jpeg" width="240px" class="e-img--bordered"/>
+          <div class="c-caption">I'm a visual thinker and I drew this portrait of myself;<br /> it is both mildly unflattering and fairly accurate. I have<br /> an intense look on my face, but I'm actually very pleasant.
+          </div>
+        </div>
+      </div>
+
+      <div class="c-bio u-text--large">
+        <p>
+          I love working on solutions for the big, ugly, nasty, meaningful problems that affect our everyday lives, like healthcare or energy efficiency.
+        </p>
+        <p>My favorite design joke:</p>
+        <div class="c-list">
+          Q: How many designers does it take to screw in a lightbulb?<br />
+          A: Does it have to be a lightbulb?
+        </div>
+        <p>
+          I also write. Check out this Medium article I wrote for GE Design about the Hawaii Missile Scare: <a href="https://medium.com/ge-design/pressing-the-wrong-button-how-design-could-have-prevented-the-hawaii-missile-alert-95ec3caee28f" target="_blank">Read the full article on Medium</a></p>
+      </div>
+
+      <!-- What I Use -->
+      <div class="c-block c-tools">
+        <hr class="c-block">
+        <h3>What I Use</h3>
+        <div class="o-layout">
+          <div class="o-layout__item">
+            <h4>Design Tools</h4>
+          </div>
+          <div class="o-layout__item">
+            <h4>Front-End Development</h4>
+          </div>
+        </div>
+
+
+        <div class="o-layout">
+          <!-- Design Tools -->
+          <div class="o-layout__item">
+            <div class="o-layout">
+              <div class="o-layout__item o-caption">
+                <div class="o-caption__image">
+                  <img src="images/logos/sketch-app-logo.jpg">
+                </div>
+                <div class="o-caption__text">
+                  <div class="o-caption__name">Sketch</div>
+                  <span class="o-caption__description">The program I use the most; I love it and it only keeps getting better.</span>
+                </div>
+              </div>
+              <div class="o-layout__item o-caption">
+                <div class="o-caption__image">
+                  <img src="images/logos/InVision-icon-pink-400px.png">
+                </div>
+                <div class="o-caption__text">
+                  <div class="o-caption__name ng-binding">InVision</div>
+                  <span class="o-caption__description">They really went beyond a click-thru prototyping tool and made it a vehicle for collaboration.</span>
+                </div>
+              </div>
+              <div class="o-layout__item o-caption">
+                <div class="o-caption__image">
+                  <img src="images/logos/paper-and-pencil.jpg">
+                </div>
+                <div class="o-caption__text">
+                  <div class="o-caption__name">Paper and pencil</div>
+                  <span class="o-caption__description">I like to start here. It slows me down, which is good sometimes.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Front-End Development -->
+          <div class="o-layout__item">
+            <div class="o-layout">
+              <div class="o-layout__item o-caption">
+                <div class="o-caption__image">
+                  <img src="images/logos/polymer-logo.png">
+                </div>
+                <div class="o-caption__text">
+                  <div class="o-caption__name">Polymer</div>
+                  <span class="o-caption__description">A home for everything and everything in its home. If this is the future, than I'm on board.</span>
+                </div>
+              </div>
+              <div class="o-layout__item o-caption">
+                <div class="o-caption__image">
+                  <img src="images/logos/angular-logo.png">
+                </div>
+                <div class="o-caption__text">
+                  <div class="o-caption__name ng-binding">Angular</div>
+                  <span class="o-caption__description">When I first discovered Angular, it made me want to rewrite every website I had ever built.</span>
+                </div>
+              </div>
+              <div class="o-layout__item o-caption">
+                <div class="o-caption__image">
+                  <img src="images/logos/csswizardy-logo.png">
+                </div>
+                <div class="o-caption__text">
+                  <div class="o-caption__name">BEMIT</div>
+                  <span class="o-caption__description ng-binding" ng-bind-html="skill.description"><a href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">CSS Wizardry's</a> rock solid organization and naming philosophy.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- What I Have Used -->
+      <div class="c-block c-tools">
+        <hr class="c-block">
+        <h3>What I Have Used</h3>
+        <div class="o-layout">
+          <div class="o-layout__item">
+            <h4 class="ng-binding">Prototyping</h4>
+          </div>
+          <div class="o-layout__item">
+            <h4 class="ng-binding">Programming</h4>
+          </div>
+        </div>
+
+        <div class="o-layout">
+          <!-- Prototyping -->
+          <div class="o-layout__item">
+            <div class="o-layout">
+              <div class="o-layout__item o-caption">
+                <div class="o-caption__image">
+                  <img src="images/logos/illustrator-logo.png">
+                </div>
+                <div class="o-caption__text">
+                  <div class="o-caption__name">Illustrator</div>
+                  <span class="o-caption__description">The workhorse; not always easy, but very strong.</span>
+                </div>
+              </div>
+              <div class="o-layout__item o-caption">
+                <div class="o-caption__image">
+                  <img src="images/logos/axure-logo.png">
+                </div>
+                <div class="o-caption__text">
+                  <div class="o-caption__name">Axure</div>
+                  <span class="o-caption__description">For me, at that fidelity, I’d rather prototype in code.</span>
+                </div>
+              </div>
+              <div class="o-layout__item o-caption">
+                <div class="o-caption__image">
+                  <img src="images/logos/fireworks-logo.png">
+                </div>
+                <div class="o-caption__text">
+                  <div class="o-caption__name">Fireworks</div>
+                  <span class="o-caption__description">Had two really great features: guess which ones.</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Programming -->
+          <div class="o-layout__item">
+            <div class="o-layout">
+              <div class="o-layout__item o-caption">
+                <div class="o-caption__image">
+                  <img src="images/logos/jquery-logo.gif">
+                </div>
+                <div class="o-caption__text">
+                  <div class="o-caption__name">jQuery</div>
+                  <span class="o-caption__description">Will always have a place in my heart; just so good at DOM manipulation.</span>
+                </div>
+              </div>
+              <div class="o-layout__item o-caption">
+                <div class="o-caption__image">
+                  <img src="images/logos/php-logo.png">
+                </div>
+                <div class="o-caption__text">
+                  <div class="o-caption__name">php</div>
+                  <span class="o-caption__description">Really good for simple CRUD websites, was my go-to for a long time.</span>
+                </div>
+              </div>
+              <div class="o-layout__item o-caption">
+                <div class="o-caption__image">
+                  <img src="images/logos/python-logo.png">
+                </div>
+                <div class="o-caption__text">
+                  <div class="o-caption__name">Python</div>
+                  <span class="o-caption__description">Fun fact: I taught a class in Python despite never having learned the language.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- What I Used to Use Professionally -->
+      <div class="c-block c-tools">
+        <hr class="c-block">
+        <h3>What I Used to Use In a Previous Life*</h3>
+        <div class="o-layout">
+          <div class="o-layout__item">
+            <h4>Full Stack aka Systems Programming</h4>
+          </div>
+        </div>
+        <div class="o-layout">
+          <div class="o-layout__item">
+            <div class="o-layout">
+              <div class="o-layout__item o-caption u-text--small">
+                <div class="o-caption__text">
+                  <div class="o-caption__name">Java</div>
+                  <span class="o-caption__description">I never jumped on the band wagon; such a nightmare for UI.</span>
+                </div>
+              </div>
+              <div class="o-layout__item o-caption u-text--small">
+                <div class="o-caption__text">
+                  <div class="o-caption__name">C/C++</div>
+                  <span class="o-caption__description">So powerful, but so many seg faults.</span>
+                </div>
+              </div>
+              <div class="o-layout__item o-caption u-text--small">
+                <div class="o-caption__text">
+                  <div class="o-caption__name">VB and C# .Net</div>
+                  <span class="o-caption__description">It was a living, although I do love ternary operators.</span>
+                </div>
+              </div>
+              <div class="o-layout__item o-caption u-text--small">
+                <div class="o-caption__text">
+                  <div class="o-caption__name">XML/XSLT</div>
+                  <span class="o-caption__description">The power of templates with the simplicity of a nuclear reactor.</span>
+                </div>
+              </div>
+              <div class="o-layout__item o-caption u-text--small">
+                <div class="o-caption__text">
+                  <div class="o-caption__name">Perl</div>
+                  <span class="o-caption__description">Used for its original purpose: massive document manipulation.</span>
+                </div>
+              </div>
+              <div class="o-layout__item o-caption u-text--small">
+                <div class="o-caption__text">
+                  <div class="o-caption__name">Oracle</div>
+                  <span class="o-caption__description">Meh, it’s a database.</span>
+                </div>
+              </div>
+              <div class="o-layout__item o-caption u-text--small">
+                <div class="o-caption__text">
+                  <div class="o-caption__name">MySql</div>
+                  <span class="o-caption__description">[shrug] It’s another database.</span>
+                </div>
+              </div>
+              <div class="o-layout__item o-caption u-text--small">
+                <div class="o-caption__text">
+                  <div class="o-caption__name">OpenLaszlo</div>
+                  <span class="o-caption__description">Ever heard of it? Ask me about this one.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="o-footnote">
+        <p>* Not a comprehensive list</p>
+      </div>
+
+  </template>
+
+  <script>
+    class AboutMe extends Polymer.Element {
+      static get is() { return 'about-me'; }
+    }
+
+    window.customElements.define(AboutMe.is, AboutMe);
+  </script>
+</dom-module>

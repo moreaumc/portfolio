@@ -1,0 +1,345 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="portfolio-view">
+  <template>
+    <style include="shared-styles">
+      :host {
+      }
+
+      .c-secnav {
+        visibility: hidden;
+        position: fixed;
+        right: 10px;
+        top: 240px;
+
+        padding: 1.6rem 0.8rem;
+        border: 1px solid #222;
+        background-color: #f6f6f6;
+
+        font-size: 0.8rem;
+        line-height: 1.6rem;
+      }
+
+      .c-secnav li {
+        list-style: none;
+      }
+
+      .c-secnav a {
+        display: block;
+        padding-left: 0.8rem;
+        padding-right: 1.6rem;
+        font-weight: normal;
+        border-bottom: 1px solid transparent;
+      }
+
+      .c-secnav a:hover {
+          border-bottom: 1px solid #467ca3;
+      }
+
+      .c-secnav .c-sevnav__title {
+        padding-right: 1.6rem;
+        font-style: italic;
+      }
+
+      .c-portfolio {
+          margin: 0 auto;
+      }
+
+      .c-piece {
+        margin-top: 1.6rem;
+      }
+
+      .c-piece > * {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 1.6rem;
+      }
+
+      /* Text only */
+      .c-piece__text,
+      .c-piece__title {
+        max-width: 640px;
+      }
+
+      .c-piece__text p,
+      .c-piece__story p,
+      .c-piece__story ol {
+        padding-top: 0.8rem;
+      }
+
+      .c-piece__story ol {
+        margin-left: 1.6rem;
+      }
+
+      .c-piece__story li {
+        padding-left: 0.8rem;
+      }
+
+      .c-piece__story img {
+        margin-top: 0.8rem;
+      }
+
+      /* Image only with optional caption */
+      .c-piece__gallery {
+        max-width: 820px;
+        margin-top: 1.6rem;
+        text-align: center;
+      }
+
+      /* Image with supporting text */
+      .c-piece__story {
+        max-width: 820px;
+      }
+
+      .c-piece--continued {
+        margin-top: 0;
+      }
+
+    @media screen and (min-width: 1200px) {
+      .c-secnav {
+          visibility: visible;
+      }
+    }
+    </style>
+
+    <div class="c-portfolio">
+
+      <div class="c-secnav">
+        <div class="c-sevnav__title">Table of Contents</div>
+        <ul>
+          <li><a href="portfolio#DataJourney" on-click="jumpTo">Storytelling</a></li>
+          <li><a href="portfolio#CICD" on-click="jumpTo">End-to-End Product Design</a></li>
+          <li><a href="portfolio#Console" on-click="jumpTo">Managing Up</a></li>
+          <li><a href="portfolio#WorkingAgreement" on-click="jumpTo">Culture Change</a></li>
+        </ul>
+      </div>
+
+      <div id="Intro" class="c-piece">
+        <div class="c-piece__text">
+        <h2>Introduction</h2>
+          <p>This is a small sample of my professional projects intended to highlight some of the ways in which I work, and show my UX process in a variety of settings. I hope you enjoy.</p>
+        </div>
+      </div>
+
+      <hr class="c-piece" />
+
+      <div id="DataJourney" class="c-piece">
+        <div class="c-piece__title">
+          <h2>Storytelling</h2>
+          <div class="o-subtitle">
+            Making Complex Concepts Easy to Understand with <!--Systems Thinking and--> Visual Communication
+          </div>
+        </div>
+        <div class="c-piece__text">
+          <h3>Challenge</h3>
+          <p>Historically, GE Digital has had a problem with telling a compelling story about how the Predix platform works to drive business outcomes. There are lots of architectural diagrams, and product feature lists that say WHAT it does, but there isn't a holistic view which shows WHY someone should use it.</p>
+        </div>
+        <div class="c-piece__text">
+          <h3>Outcome</h3>
+          <p>The Data Journey diagram answers that question and does it in a simple, easy-to-consume fashion. The Director of Cloud Engineering is using it as a central part of his communication strategy, recently presented it to 400 CIOs in Florence, Italy, and keeps a copy at his desk. A Sr. Director of Product Management included it in a strategy presentation to the GE Digital Customer Advisory Board, and the CEO of GE Digital described it as “the best view of Predix” he had ever seen.</p>
+        </div>
+        <div class="c-piece__gallery">
+          <img src="images/portfolio/data_journey/Data_Journey.jpeg" class="e-img--bordered" />
+          <div class="c-caption">
+            The Data Journey: From Asset to Outcome
+          </div>
+        </div>
+        <div class="c-piece__text">
+          <h3>Solution</h3>
+          <p>The Data Journey is a hand-drawn diagram that represents how data generated by large, industrial assets is securely transferred to the cloud, processed, analyzed and used by customers to improve the performance of their fleet, all utilizing the various products and capabilities offered by Predix.</p>
+          <p>It intentionally does not contain a lot of explanatory text as it is meant to be part of a presentation or, even better, a discussion. The emphasis is not on the individual items but on the connections and relationships between them.</p>
+        </div>
+        <div class="c-piece__text">
+          <h3>Process</h3>
+          <p>Last year, I was asked to explain how several projects I had worked on fit together. So I sat down with a pencil and a piece of paper and started sketching out a diagram. I brought my sketches around to various stakeholders to get validation and feedback. It resonated with a lot of people and I was often asked for a copy. Eventually, it evolved from a series of connected products to a representation of how data moves through Predix: this was the data journey.</p>
+        </div>
+        <div class="c-piece__gallery">
+          <div class="o-layout">
+            <div class="o-layout__item u-1/1 u-1/2@sm">
+              <img src="images/portfolio/data_journey/Predix_Suite.png" class="e-img--bordered__small" />
+              <div class="c-caption">The original drawing, with feedback</div>
+            </div>
+            <div class="o-layout__item u-1/1 u-1/2@sm">
+              <img src="images/portfolio/data_journey/Data Journey_original.png" class="e-img--bordered__small" />
+              <div class="c-caption">The first version of the Data Journey</div>
+            </div>
+          </div>
+        </div>
+        <div class="c-piece__text">
+          <p>The diagram is also the basis for an interactive prototype. Each section is a clickable hotspot that gives the viewer a more detailed description of what it does and how it works with other capabilities. The detail pages only have one or two sentences with a single, supporting image. These pages can then be linked to technical literature, use cases, or even a high-fidelity prototype of a specific tool, letting the viewer go as deep into the feature as they want.</p>
+        </div>
+        <div class="c-piece__gallery">
+          <div class="o-layout">
+            <div class="o-layout__item u-1/1 u-1/3@sm">
+              <img src="images/portfolio/data_journey/1_Data.png" />
+            </div>
+            <div class="o-layout__item u-1/1 u-1/3@sm">
+              <img src="images/portfolio/data_journey/2_Asset_to_Edge.png" />
+            </div>
+            <div class="o-layout__item u-1/1 u-1/3@sm">
+              <img src="images/portfolio/data_journey/4_Event_Hub.png" />
+            </div>
+          </div>
+          <div class="c-caption">A sample of detail pages</div>
+        </div>
+      </div>
+
+      <hr class="c-piece" />
+
+      <div id="CICD" class="c-piece">
+        <h2 class="c-piece__title">End-to-End Product Design
+          <div class="o-subtitle">Designing a Solution that Improves Processes, Not Just Supports Them</div>
+        </h2>
+        <div class="c-piece__text">
+          <h3>Challenge</h3>
+          <p>Continuous Integration/Continous Deplopyment is a modern software development technique based on Agile methodologies that encourages making small, frequent, well-tested changes instead of massive, occasional releases. I led a team, consisting of myself and a junior designer, on a project to adapt CI/CD practices for industrial software development teams.</p>
+        </div>
+        <!--
+        <div class="c-piece__text">
+          <h3>Outcome</h3>
+          <p>Our goal was not just to craft a CI/CD offering for the industrial space, but to make our customers better software developers with it. The solution we designed was a framework that integrated with a team’s existing tools and promoted best practices.</p>
+        </div>
+        -->
+        <div class="c-piece__story o-layout">
+          <div class="o-layout__item u-1/1 u-1/2@sm">
+            <h3>Outcome</h3>
+            <p>Our goal was not just to craft a CI/CD offering for the industrial space, but to make our customers better software developers with it. The solution we designed was a framework that expressed the design principles we created:</p>
+            <ol>
+              <li>Got to Users Where They Work</li>
+              <li>Build for Best Practices</li>
+              <li>Simplify Adoption</li>
+            </ol>
+          </div>
+          <div class="o-layout__item u-1/1 u-1/2@sm">
+            <h3>&nbsp</h3>
+            <img src="images/portfolio/cicd/Workflow_cropped.jpg" class="e-img--bordered__small" />
+            <div class="c-caption">CI/CD is only one part of the Software Development Lifecycle</div>
+          </div>
+        </div>
+        <div class="c-piece__text">
+          <h3>Solution</h3>
+          <p>I have written a deep-dive case study for this project that explains our exact process and what we learned, but because this product has not been released, I am unable to post it publicly. If you are interested in learning more, <a href="https://www.linkedin.com/in/michaelcohnmoreau/" target="_blank">please reach out to me</a>.</p>
+        </div>
+        <div class="c-piece__story o-layout">
+          <div class="o-layout__item u-1/1 u-1/2@sm">
+            <h3>Process</h3>
+            <p>Our initial research consisted of studying best practices through papers and tutorials from industry experts, conducting interviews with 14 specialists, and running workshops with three development teams with a variety of maturity in their practices.</p>
+            <p>To synthesize our research, we used affinity diagramming and AEIOU techniques. We developed four personas, and created a set of design principles to inform our solution. In order to demonstrate how our principles could be expressed within the product, we drew storyboards.</p>
+          </div>
+          <div class="o-layout__item u-1/1 u-1/2@sm">
+            <h3>&nbsp</h3>
+            <img src="images/portfolio/cicd/Synthesis.jpg" class="e-img--bordered__small" />
+            <div class="c-caption">Synthesizing research from interviews and workshops</div>
+          </div>
+        </div>
+        <div class="c-piece__text">
+          <p>Then, we sketched out designs and built an interactive prototype which we used to conduct usability testing. The testing went well but it also exposed some problems with how information was displayed. Users were confused by the simplified, abstract view of the pipeline (shown on the left) so we iterated on the pipeline summary, adding more information, and re-tested with greater success.</p>
+        </div>
+        <div class="c-piece__gallery c-piece--continued o-layout">
+          <div class="o-layout__item u-1/1 u-1/2@sm">
+            <img src="images/portfolio/cicd/Summary_original_cropped.png" class="e-img--bordered__small" />
+            <div class="c-caption">The original “bubble” pipeline summary view</div>
+          </div>
+          <div class="o-layout__item u-1/1 u-1/2@sm">
+            <img src="images/portfolio/cicd/Summary_revised_cropped.png" class="e-img--bordered__small" />
+            <div class="c-caption">The updated version</div>
+          </div>
+        </div>
+        <div class="c-piece__text">
+          <h4>Next Steps</h4>
+          <p>The wireframes are currently going through visual design with a planned release for the new product by end-of-year 2018.</p>
+        </div>
+      </div>
+
+      <hr class="c-piece" />
+
+      <div id="Console" class="c-piece">
+        <h2 class="c-piece__title">Managing Up
+          <div class="o-subtitle">Ensuring that the User's Mental Model is Accurately Reflected in the Information Architecture</div>
+        </h2>
+        <div class="c-piece__text">
+          <h3>Challenge</h3>
+          <p>The Predix Console is a set of tools to help software development teams manage SaaS applications, but it had a problem. The information architecture reflected the underlying technical structure of the system, not the mental model of a software developer.</p>
+        </div>
+        <div class="c-piece__text">
+          <h3>Outcome</h3>
+          <p>After some determined campaigning, I was able to convince the other designers and the development team that we needed to fundamentally change the structure of the Console. A new version with an improved layout was released at the end of 2017.</p>
+        </div>
+        <div class="c-piece__story o-layout">
+          <div class="o-layout__item u-1/1 u-1/2@sm">
+            <h3>Solution</h3>
+            <p>This project hasn’t been released yet, so I am unable to post a full solution online. <a href="https://www.linkedin.com/in/michaelcohnmoreau/" target="_blank">Contact me for more information.</a></p>
+            <p>Applications are deployed to the Predix Platform in spaces. The original console forced a user to select a space first, to see what was deployed in it. However, that's not how developers use the spaces. A single app is deployed to multiple spaces in order to test it before releasing to production.</p>
+            <p>The new Console flips this paradigm and lets a user select an app first, showing the spaces where it is deployed in a list on the left-hand side. Selecting a space shows the details for that instance. This allows a user to have a holistic view of an application as code changes are made and it moves through the deployment pipeline, while still retaining granular control over usage and billing on a per space level.</p>
+          </div>
+          <div class="o-layout__item u-1/1 u-1/2@sm">
+            <h3>&nbsp;</h3>
+            <img src="images/portfolio/App_Details.png" class="e-img--bordered__small" />
+            <div class="c-caption">The App Details page, showing spaces in an inbox on the left</div>
+          </div>
+        </div>
+        <div class="c-piece__text">
+          <h3>Process</h3>
+          <p>I had long been an advocate for fundamentally changing the way information was structured in the Console, especially how the relationship between different elements was represented. When I proposed changing the structure, I was met with a considerable amount of reluctance and debate, not just from the development team but other designers, too. The concern was that it would be a significant effort to change the structure and would require a considerable amount of redesign on how a user moved around the Console.</p>
+        </div>
+        <div class="c-piece__story o-layout">
+          <div class="o-layout__item c-piece__story">
+            <p>In order to show the value of what I was proposing, I drew up site maps and workflow diagrams to show how a user would need to go to multiple locations to get the information they needed. I also conducted a wayfinding exercise to show how getting around the Console was confusing due to the fact it forced a user into an overly narrow view of their apps. Eventually, I was able to convince the team that this was better information architecture and that the additional effort needed to implement it was worthwhile.</p>
+          </div>
+          <div class="o-layout__item">
+            <img src="images/portfolio/Console_Sketches.jpeg" />
+            <div class="c-caption">Sketching exercises to show how a user navigates</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="c-piece" />
+
+      <div id="WorkingAgreement" class="c-piece">
+        <h2 class="c-piece__title">Culture Change</h2>
+        <div class="c-piece__text">
+          <h3>Challenge</h3>
+          <p>When working with a team that does not have an established design process, it can be difficult to integrate as a designer. A principal designer I worked with put it simply as:</p>
+          <div class="c-callout">Design is easy:<br />it's building relationships that's hard.</div>
+          <p>Making the case for the value of UX only goes so far. Often it is like a person who knows they need to lose weight but doesn’t know how to begin; without actionable steps to take, nothing will change. To that end, I created the UX Working Agreement.</p>
+        </div>
+        <div class="c-piece__text">
+          <h3>Solution</h3>
+          <p>The UX Working Agreement was born out of researching different ways people had integrated good design practices into the Agile/Lean software development process. It outlines four concrete deliverables that I, as an interaction designer, will provide to the team. It also shows what I need to accomplish those and the risks if I don’t get that support. It’s couched in the language of Agile practices, such as dependencies and blockers, and takes a positive tone; it’s not about demanding that a team work with me, but about showing them the tangible benefit if they do.</p>
+          <p>The agreement was designed in a tabloid size so that it could be printed out and hung up like a poster in the working area. That way, it could be referenced at any time, such as during standups.</p>
+        </div>
+        <div class="c-piece__gallery">
+          <img src="images/portfolio/UX_Working_Agreement.png" />
+        </div>
+      </div>
+    </div>
+
+  </template>
+
+  <script>
+    class Portfolio extends Polymer.Element {
+      static get is() { return 'portfolio-view'; }
+
+      jumpTo(e) {
+        this.root.querySelector(e.target.hash).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        e.stopPropagation();
+      }
+    }
+
+    window.customElements.define(Portfolio.is, Portfolio);
+  </script>
+</dom-module>

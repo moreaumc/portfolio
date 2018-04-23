@@ -1,0 +1,62 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-blog">
+  <template>
+    <style include="shared-styles">
+      :host {
+      }
+
+      .c-blog {
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .c-blog .c-blog__timestamp {
+          padding: 0;
+          font-style: italic
+      }
+
+      .c-blog .c-blog__body p {
+          margin-top: 1rem
+      }
+    </style>
+
+    <div class="c-blog">
+
+      <div class="c-blog__piece">
+        <h3>Pressing the Wrong Button</h3>
+        <div class="c-blog__body">
+          <p>On January 13th, 2018, a false alarm went out in Hawaii stating a missile strike was imminent. A lot of articles were written about how good design could have stopped what was, at the time, believed to be a mistake. I felt like a lot of the writing took a "design is good" tone, but were far too generic and consumer-focused. I wanted to add a perspective from someone who worked in the industrial space on critical systems where preventing errors is often more important than making interfaces easy-to-use. My article was published under the GE Design publication on Medium.</p>
+          <p><a href="https://medium.com/ge-design/pressing-the-wrong-button-how-design-could-have-prevented-the-hawaii-missile-alert-95ec3caee28f" target="_blank">Read the full article on Medium</a></p>
+        </div>
+        <div class="c-blog__body">
+          <p><span class="o-emphasis">UPDATE:</span> It has since come out that the operator genuinely thought that the missile strike was real, making the article a little out of date. Making sure a user does not act on bad information is still an important aspect of good design, but it's a whole nother article in-and-of itself.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </template>
+
+  <script>
+    class MyBlog extends Polymer.Element {
+      static get is() {
+        return 'my-blog';
+      }
+    }
+
+    window.customElements.define(MyBlog.is, MyBlog);
+  </script>
+</dom-module>

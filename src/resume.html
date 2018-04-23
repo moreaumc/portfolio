@@ -1,0 +1,279 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-resume">
+  <template>
+    <style include="shared-styles">
+      :host {
+      }
+
+      .c-resume {
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .c-job {
+        padding-bottom: 1rem;
+      }
+
+      .c-job__final {
+        padding-bottom: 0;
+      }
+
+      .c-job__header {
+        padding-top: 0.5rem;
+
+      }
+
+      .c-job__company {
+        font-weight: bold;
+        line-height: 1.4rem;
+      }
+
+      .c-job__location {
+        font-weight: normal;
+      }
+
+      .c-job__title {
+        font-style: italic;
+        line-height: 1.4rem;
+      }
+
+      .c-job__dates {
+        line-height: 1.4rem;
+        text-align: right;
+      }
+
+      .c-job__description {
+        padding-top: 0.5rem;
+      }
+
+      .c-job__description p {
+        margin-bottom: 0.5rem;
+      }
+    </style>
+
+    <div class="c-heroimage">
+      <img src="images/banner.jpg" />
+      <div class="c-caption">Conducting a storyboarding exercise with a group of product managers. Photo credit: Diana Freeman-Baer</div>
+    </div>
+
+    <div class="c-resume">
+
+      <a href="https://www.linkedin.com/in/michaelcohnmoreau/" target="_blank">Find me on LinkedIn</a>
+
+      <div class="c-block">
+        <h3>EXPERIENCE</h3>
+        <div class="c-job">
+          <div class="c-job__header">
+            <div class="c-job__company">GE Digital<span class="c-job__location">, San Ramon, CA</span></div>
+            <div class="o-layout">
+              <div class="o-layout__item u-2/3">
+                <div class="c-job__title">Lead Interaction Designer</div>
+                <div class="c-job__title">User Experience Leadership Program Associate</div>
+              </div>
+              <div class="o-layout__item u-1/3">
+                <div class="c-job__dates">July 2016 - Present</div>
+                <div class="c-job__dates">June 2014 - July 2016</div>
+              </div>
+            </div>
+          </div>
+          <div class="c-job__description">
+            <p>I joined GE as an associate in the first User Experience Leadership Program. In part, this meant working full-time as an interaction designer across businesses in GE; I conducted end-user research and design in a variety of industrial settings including a jet engine repair shop, locomotive cab, power utility control room, and a wind farm with a prototype turbine. In addition to regular interaction design/UX work, we were given the additional responsibility of helping to define the future of design at GE as influencers and design evangelists.</p>
+            <p>Since graduating from the UXLP, I have worked as a career interaction designer focused primarily on the Predix Platform. These are the tools and capabilities for supporting software development teams working in the Industrial Internet of Things (IIoT).</p>
+            <p>I have continued to promote design thinking, educate about user experience best practices, and help to define what it means to be a designer at GE on a multidisciplinary team in an Agile/Lean software development environment. I have also had the opportunity to mentor several early career designers in developing their own design process as part of work on real-world, commercial products.</p>
+            <p>Lately, I have been using systems thinking methodology to create diagrams to help communicate how the various tools and capabilities in the Predix Platform and Applications work together to drive business outcomes.</p>
+            <p>Fun side note: I built the original version of the  px-steps  component, part of the Predix UI Design System.</p>
+          </div>
+        </div>
+
+        <div class="c-job">
+          <div class="c-job__header">
+            <div class="c-job__company">
+              Indiana University<span class="c-job__location">, Bloomington, IN</span>
+            </div>
+            <div class="o-layout">
+              <div class="o-layout__item u-2/3">
+                <div class="c-job__title">
+                  Research Assistant
+                </div>
+              </div>
+              <div class="o-layout__item u-1/3">
+                <div class="c-job__dates">
+                  May 2013 - June 2014
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-job__description">
+            <p>While in grad school studying for a MS in Human Computer Interaction, I worked for Profs. Jeffrey and Shaowen Bardzell on a grant from Intel focused on exploring anxiety and the quantifiable self. With the rise of highly granular tracking apps, the goal was to explore the negative aspects of this phenomenon using critical design techniques. </p>
+            <p>For my part, I helped several PhD students with developing the protocols and complementary research materials, and building the software and devices for their studies. This ran the gamut from manufacturing tangible interactions (physical devices) for a long-term field study, to building websites for participants to explore their data.</p>
+          </div>
+        </div>
+
+        <div class="c-job">
+          <div class="c-job__header">
+            <div class="c-job__company">
+              Passport Health Communications<span class="c-job__location">, Franklin, TN</span>
+            </div>
+            <div class="o-layout">
+              <div class="o-layout__item u-2/3">
+                <div class="c-job__title">
+                  Software Developer II/User Experience Developer
+                </div>
+              </div>
+              <div class="o-layout__item u-1/3">
+                <div class="c-job__dates">
+                  July 2010 - October 2012
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-job__description">
+            <p>When I joined Passport, it was a company that wanted to embrace design, but wasn’t sure where to start. I was hired as a front-end developer in part because HR did not have a job description for a design role.</p>
+            <p>I was assigned to work on a multi-year initiative to completely redesign their flagship suite of products for patient access called eCareNext. We were trying to take 6 different applications, many that were incorporated through acquisitions, and create a holistic user experience. After defining the framework, we identified a beta hospital for each application who we worked with to define requirements, conduct user interviews, and usability test with expert users.</p>
+            <p>As part of the update, I designed, developed, and conducted usability testing for a brand new interactive display of health benefit information, for which I received a patent.</p>
+          </div>
+        </div>
+
+        <div class="c-job">
+          <div class="c-job__header">
+            <div class="c-job__company">
+              Circle 7 Radio<span class="c-job__location">, Nashville, TN</span>
+            </div>
+            <div class="o-layout">
+              <div class="o-layout__item u-2/3">
+                <div class="c-job__title">
+                  Co-Founder and Chief Technology Officer
+                </div>
+              </div>
+              <div class="o-layout__item u-1/3">
+                <div class="c-job__dates">
+                  March 2007 - December 2010
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-job__description">
+            <p>Circle 7 Radio was an online radio station I co-founded with two friends. My focus was the website; I designed and built the website, worked with a graphic designer on branding and marketing, and managed a college intern. Our focus as a radio station was on promoting unsigned bands in the Middle Tennessee area. We were a spectacular failure, for a variety of reasons, but it was a great lesson in what it takes to run a successful company.</p>
+          </div>
+        </div>
+
+        <div class="c-job">
+          <div class="c-job__header">
+            <div class="c-job__company">
+              McKesson Corp.<span class="c-job__location">, Nashville, TN</span>
+            </div>
+            <div class="o-layout">
+              <div class="o-layout__item u-2/3">
+                <div class="c-job__title">
+                  Software Engineer
+                </div>
+              </div>
+              <div class="o-layout__item u-1/3">
+                <div class="c-job__dates">
+                  October 2006 - July 2010
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-job__description">
+            <p>At McKesson, I was part of the Advanced Development Team embedded at Vanderbilt University Medical Center. We collaborated with VUMC on developing new features for an order-entry and decision support system using the hospital as a beta site.</p>
+            <p>The application we worked on provided an incredible amount of value by preventing errors and complications, but at 10 years old with no significant UI update, it was very difficult to use. It was my interest in wanting to improve the usability of what was an otherwise useful application that lead me to design.</p>
+            <p>As a part of learning about UX, I was able to connect with Dr. Anne Miller, a human factors researcher at Vanderbilt. I assisted Dr. Miller on usability testing a sepsis protocol application which she later published in an academic journal. In addition to building an interactive prototype for the study, I conducted several tests with doctors and nurse practitioners.</p>
+          </div>
+        </div>
+
+        <div class="c-job c-job__final">
+          <div class="c-job__header">
+            <div class="c-job__company">
+              Vero Systems Group<span class="c-job__location">, Nashville, TN</span>
+            </div>
+            <div class="o-layout">
+              <div class="o-layout__item u-2/3">
+                <div class="c-job__title">
+                  Rich Internet Application Developer
+                </div>
+              </div>
+              <div class="o-layout__item u-1/3">
+                <div class="c-job__dates">
+                  July 2005 - October 2006
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-job__description">
+            <p>I was the third employee at Vero, a small startup for auto auction software. While I did a lot of backend development, my primary responsibility was designing and building software, including custom user interface components, for a touch screen display with badge and label printing to aid check-in at auctions.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-block">
+        <h3>EDUCATION</h3>
+
+        <div class="c-job">
+          <div class="c-job__header">
+            <div class="c-job__company">
+              Indiana University<span class="c-job__location">, Bloomington, Indiana</span>
+            </div>
+            <div class="o-layout">
+              <div class="o-layout__item u-2/3">
+                <div class="c-job__title">
+                  Master of Science in Human-Computer Interaction Design
+                </div>
+              </div>
+              <div class="o-layout__item u-1/3">
+                <div class="c-job__dates">
+                  May 2014
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-job">
+          <div class="c-job__header">
+            <div class="c-job__company">
+              Case Western Reserve University<span class="c-job__location">, Cleveland, Ohio</span>
+            </div>
+            <div class="o-layout">
+              <div class="o-layout__item u-2/3">
+                <div class="c-job__title">
+                  Bachelor of Arts in Computer Science and English
+                </div>
+              </div>
+              <div class="o-layout__item u-1/3">
+                <div class="c-job__dates">
+                  August 2005
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </template>
+
+  <script>
+    class MyResume extends Polymer.Element {
+      static get is() {
+        return 'my-resume';
+      }
+    }
+
+    window.customElements.define(MyResume.is, MyResume);
+  </script>
+</dom-module>
