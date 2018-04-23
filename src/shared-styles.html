@@ -257,13 +257,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     .o-layout {
         display: flex;
+        flex-wrap: wrap;
         margin: 0 0 0 -20px;
         padding: 0;
-        list-style: none
+        list-style: none;
     }
 
-    .o-layout--wrap {
-      flex-wrap: wrap;
+    .o-layout--nowrap {
+      flex-wrap: nowrap;
     }
 
     .o-layout .o-layout__item {
@@ -355,7 +356,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     .c-callout {
-        padding: 20px;
+        padding: 20px 0;
         font-size: 24px;
         font-size: 1.6rem;
         line-height: 1.6666666667;
@@ -368,7 +369,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     .c-heroimage {
       max-width: 820px;
-      marginw: 20px auto;
+      margin: 20px auto;
       text-align: center;
     }
 
@@ -454,6 +455,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         .c-list {
           margin-left: -22px;
+        }
+
+        .c-callout {
+          padding-left: 20px;
+          padding-right: 20px;
         }
 
         .u-1\/1\@sm {
